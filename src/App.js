@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { PieChart, Pie, Cell } from 'recharts'
 import { CSSTransitionGroup } from 'react-transition-group'
 import './pie-chart.css'
+import Comcard from './Comcard'
 
 const COLORS = ['#f4baba', '#e0cd84', '#91e1dd', '#a48ad4']
 const data = [
@@ -71,6 +72,7 @@ class App extends Component {
           transitionLeaveTimeout={300}>
           {items}
         </CSSTransitionGroup>
+        <Comcard />
       </div>
     )
   }
