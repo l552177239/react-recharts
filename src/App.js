@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { PieChart, Pie, Cell } from 'recharts'
 import { CSSTransitionGroup } from 'react-transition-group'
-import './pie-chart.css'
 import Comcard from './Comcard'
+import './pie-chart.css'
 
 const COLORS = ['#f4baba', '#e0cd84', '#91e1dd', '#a48ad4']
 const data = [
