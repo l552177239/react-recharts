@@ -2,17 +2,25 @@ import React from 'react'
 import { CSSTransitionGroup } from 'react-transition-group'
 
 class Comcard extends React.Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state = {
-      item: [1,2,3,4],
+      item: [{name:'yu'}],
       show: true
     }
   }
-  handleClick = () => console.log(1)
+  handleClick = () => {
+    let newItems = this.state.item.slice()
+    newItems.push({
+      name: 'liu'
+    })
+    this.setState({
+      item: newItems
+    })
+  }
   render(){
-    const items = this.state.item.map( item => (
-      <div key={item}>{item}</div>
+    const items = this.state.item.map( (item,i) => (
+      <div key={i}>{item.name}</div>
     ))
     return(
       <div className="comcard">
